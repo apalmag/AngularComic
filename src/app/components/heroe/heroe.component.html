@@ -1,0 +1,31 @@
+<br>
+<div class="row animated fadeIn fast">
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-header">
+        <h3>{{heroe.nombre}}</h3>
+      </div>
+      <div class="card-body">
+        <img class="card-img-top" [src]="heroe.img" alt="{{heroe.nombre | uppercase}}">
+        <br>
+        <hr>
+        <img class="card-img-top" [src]="hogar" alt="Card image cap">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header">
+        <h3>Biografia: <small>{{heroe.nombre}}</small></h3>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{heroe.bio}}</p>
+          <footer class="blockquote-footer">Aparicion: <cite title="Source Title">{{heroe.aparicion}}</cite></footer>
+        </blockquote>
+        <br>
+        <input type="button" value="Volver" class="btn btn-outline-danger btn-block" [routerLink]="['/heroes']">
+      </div>
+    </div>
+  </div>
+</div>
